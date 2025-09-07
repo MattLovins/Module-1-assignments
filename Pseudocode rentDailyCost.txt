@@ -1,0 +1,35 @@
+//initialization
+
+FLOAT_DAYS_IN_MONTH = 30
+floatCostOfRent = 0.00
+floatGroceryCost = 0.00
+floatRentCost = 0.00
+floatUtilitiesCost = 0.00
+floatMonthlyIncome = 0.00
+floatTotalCost = 0.00
+floatDiscretionarySpending = 0.00
+floatDailyIncome = 0.00
+floatDailyCost = 0.00
+
+//get data
+input = "Please enter user's monthly income: $"
+floatMonthlyIncome = input
+input = "Please enter cost of rent/mortgage: $"
+floatCostOfRent = input
+input = "Please enter cost of grocerey bill: $"
+floatGroceryCost = input
+input = "Please enter cost of utilities bill: $"
+floatUtilitiesCost = input
+
+//process data
+floatDailyIncome = floatMonthlyIncome / FLOAT_DAYS_IN_MONTH
+floatCostOfRent = floatCostOfRent / FLOAT_DAYS_IN_MONTH
+floatGroceryCost = floatGroceryCost / FLOAT_DAYS_IN_MONTH
+floatUtilitiesCost = floatUtilitiesCost / FLOAT_DAYS_IN_MONTH
+floatTotalCost = floatCostOfRent + floatGroceryCost + floatUtilitiesCost
+floatDiscretionarySpending = floatDailyIncome - floatTotalCost
+
+//output information
+output = "user's daily income is: $" + floatDailyIncome
+output = "user's daily rent is: $" + floatTotalCost
+output + "user's daily discretionary spending is: $" + floatDiscretionarySpending
